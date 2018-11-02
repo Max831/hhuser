@@ -1,0 +1,17 @@
+udo -u postgres psql
+postgres=# CREATE DATABASE hh;
+CREATE DATABASE
+postgres=# CREATE USER max WITH password '831';
+CREATE ROLE
+postgres=# GRANT ALL ON DATABASE hh TO max;
+GRANT
+postgres=# CREATE TABLE hhusers(
+id SERIAL PRIMARY KEY,
+fio VARCHAR(64),
+vozrast INTEGER,
+zarplata MONEY,
+pol VARCHAR(20),
+region VARCHAR(64),
+dev VARCHAR(128),
+stazh FLOAT4,
+kluchevie_slova VARCHAR(128));
